@@ -9,15 +9,16 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f7fa;
+  background: #ffffff;
+  color: #333;
 }
 
 /* HEADER */
 header {
-  background: linear-gradient(135deg, #2c3e50, #34495e);
-  color: white;
+  background: #ffffff;
   text-align: center;
   padding: 60px 20px;
+  border-bottom: 1px solid #eee;
 }
 
 header h1 {
@@ -26,46 +27,47 @@ header h1 {
 }
 
 header p {
+  color: #777;
   font-size: 18px;
-  margin: 10px 0 20px;
+  margin-top: 10px;
 }
 
 .btn {
   display: inline-block;
+  margin: 10px;
   padding: 12px 25px;
-  margin: 5px;
-  background: #27ae60;
+  background: black;
   color: white;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
+  border-radius: 25px;
+  font-size: 14px;
 }
 
 /* SECCIONES */
 section {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 h2 {
   text-align: center;
-  color: #2c3e50;
+  margin-bottom: 30px;
 }
 
 /* SERVICIOS */
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 .card {
-  background: white;
-  border-radius: 15px;
+  border: 1px solid #eee;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   text-align: center;
+  background: white;
 }
 
 .card img {
@@ -75,48 +77,54 @@ h2 {
 }
 
 .card h3 {
-  margin: 15px 0;
+  margin: 15px 0 5px;
+}
+
+.card p {
+  padding: 0 10px 20px;
+  color: #666;
+}
+
+/* TEXTO CENTRADO */
+.center {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  color: #555;
 }
 
 /* FORMULARIO */
 form {
-  background: white;
+  border: 1px solid #eee;
   padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
 }
 
 input, textarea {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
+  border-radius: 6px;
 }
 
 button {
   width: 100%;
-  background: #27ae60;
+  background: black;
   color: white;
-  padding: 15px;
+  padding: 14px;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
 /* FOOTER */
 footer {
-  background: #2c3e50;
-  color: white;
   text-align: center;
-  padding: 20px;
-}
-
-/* ANIMACIÓN */
-.card:hover {
-  transform: translateY(-5px);
-  transition: 0.3s;
+  padding: 30px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #777;
 }
 </style>
 </head>
@@ -125,11 +133,20 @@ footer {
 
 <header>
   <h1>Lirenova</h1>
-  <p>Reparación, instalación y motorización de persianas</p>
+  <p>Especialistas en reparación e instalación de persianas</p>
 
-  <a class="btn" href="tel:674982994">📞 Llamar</a>
-  <a class="btn" href="https://wa.me/34674982994">💬 WhatsApp</a>
+  <a class="btn" href="tel:674982994">Llamar</a>
+  <a class="btn" href="https://wa.me/34674982994">WhatsApp</a>
 </header>
+
+<section>
+  <h2>Sobre nosotros</h2>
+  <p class="center">
+    En Lirenova ofrecemos soluciones profesionales para todo tipo de persianas. 
+    Nos especializamos en reparación, instalación y motorización, trabajando con materiales de alta calidad 
+    como PVC, aluminio y madera. Nuestro objetivo es ofrecer un servicio rápido, eficaz y duradero.
+  </p>
+</section>
 
 <section>
   <h2>Servicios</h2>
@@ -137,21 +154,21 @@ footer {
   <div class="services">
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1581579186913-45acb3c4f5b8">
+      <img src="https://images.unsplash.com/photo-1598300053653-d8c9c8cbe9c4?auto=format&fit=crop&w=800&q=80">
       <h3>Reparación</h3>
-      <p>Arreglamos cualquier tipo de persiana.</p>
+      <p>Solucionamos cualquier avería en tus persianas de forma rápida y profesional.</p>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+      <img src="https://images.unsplash.com/photo-1582582429416-6c47b1b9b91b?auto=format&fit=crop&w=800&q=80">
       <h3>Instalación</h3>
-      <p>Persianas nuevas a medida.</p>
+      <p>Instalamos persianas nuevas adaptadas a tu vivienda o negocio.</p>
     </div>
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1616627985040-cc8c1e3bbf47">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80">
       <h3>Motorización</h3>
-      <p>Automatiza tus persianas fácilmente.</p>
+      <p>Convierte tus persianas en automáticas y mejora tu comodidad.</p>
     </div>
 
   </div>
@@ -159,18 +176,18 @@ footer {
 
 <section>
   <h2>Materiales</h2>
-  <p style="text-align:center;">
-    Trabajamos con PVC, aluminio y madera, garantizando calidad y durabilidad.
+  <p class="center">
+    Trabajamos con persianas de PVC, aluminio y madera, garantizando resistencia, estética y durabilidad.
   </p>
 </section>
 
 <section>
-  <h2>Solicita presupuesto</h2>
+  <h2>Solicita tu presupuesto</h2>
 
   <form onsubmit="enviarWhatsApp(); return false;">
     <input type="text" id="nombre" placeholder="Tu nombre" required>
     <input type="text" id="telefono" placeholder="Tu teléfono" required>
-    <textarea id="mensaje" placeholder="¿Qué problema tienes?" required></textarea>
+    <textarea id="mensaje" placeholder="Describe tu problema o lo que necesitas..." required></textarea>
 
     <button type="submit">Enviar por WhatsApp</button>
   </form>
@@ -189,12 +206,16 @@ function enviarWhatsApp() {
 
   var texto = "Hola, soy " + nombre +
               "%0A Teléfono: " + telefono +
-              "%0A Problema: " + mensaje;
+              "%0A Consulta: " + mensaje;
 
   var url = "https://wa.me/34674982994?text=" + texto;
 
   window.open(url, "_blank");
 }
+</script>
+
+</body>
+</html>
 </script>
 
 </body>
