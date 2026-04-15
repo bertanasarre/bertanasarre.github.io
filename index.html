@@ -3,36 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lirenova</title>
+
+<!-- FUENTE PRO -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: 'Inter', sans-serif;
+  background: #f4f6f1;
+  color: #1f2e23;
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
+  padding: 20px 8%;
   background: white;
-  position: sticky;
-  top: 0;
 }
 
-nav a {
-  margin: 0 10px;
+nav .menu a {
+  margin: 0 15px;
   text-decoration: none;
-  color: black;
+  color: #1f2e23;
 }
 
 .btn {
-  background: #2e5d3a;
+  background: #2f5d3a;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border-radius: 30px;
+  text-decoration: none;
 }
 
 /* HERO */
@@ -40,8 +45,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 10%;
-  background: #eef1ec;
+  padding: 80px 8%;
   flex-wrap: wrap;
 }
 
@@ -50,38 +54,74 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.hero p {
+  color: #4d5c50;
 }
 
 .hero img {
-  width: 400px;
-  border-radius: 15px;
+  width: 450px;
+  border-radius: 20px;
 }
 
-/* SECTIONS */
+/* SERVICIOS */
 .section {
-  padding: 80px 10%;
+  padding: 80px 8%;
+  text-align: center;
 }
 
 .services {
   display: flex;
   gap: 20px;
+  margin-top: 40px;
   flex-wrap: wrap;
 }
 
 .card {
   flex: 1;
-  background: #eef1ec;
-  padding: 20px;
+  min-width: 250px;
+  background: #e8ece5;
+  padding: 30px;
+  border-radius: 25px;
+}
+
+/* BLOQUE */
+.split {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 8%;
+  flex-wrap: wrap;
+}
+
+.split img {
+  width: 450px;
   border-radius: 20px;
-  text-align: center;
+}
+
+/* FORM */
+form {
+  background: #e8ece5;
+  padding: 30px;
+  border-radius: 25px;
+  max-width: 700px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
 }
 
 /* FOOTER */
 footer {
-  background: #123220;
+  background: #16351f;
   color: white;
-  padding: 40px 10%;
+  padding: 50px 8%;
 }
 </style>
 </head>
@@ -92,9 +132,9 @@ footer {
 <nav>
   <h2>Lirenova</h2>
 
-  <div>
+  <div class="menu">
     <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
+    <a href="#servicios">Nosotros</a>
     <a href="#contacto">Contacto</a>
   </div>
 
@@ -104,8 +144,8 @@ footer {
 <!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-text">
-    <h1>Tu hogar cómodo, persianas perfectas</h1>
-    <p>Especialistas en instalación, reparación y motorización.</p>
+    <h1>Tu hogar cómodo,<br>persianas perfectas</h1>
+    <p>Lirenova, técnicos en montaje y reparación</p>
 
     <a class="btn" href="https://wa.me/34674982994">WhatsApp</a>
   </div>
@@ -116,40 +156,53 @@ footer {
 <!-- SERVICIOS -->
 <section class="section" id="servicios">
   <h2>Nuestros Servicios</h2>
+  <p>Sistemas duraderos y estéticos adaptados a cada vivienda.</p>
 
   <div class="services">
 
     <div class="card">
       <h3>Mantenimiento</h3>
-      <p>Revisamos y reparamos tus persianas.</p>
-      <a class="btn" href="#contacto">Ver más</a>
+      <p>Asegura tus persianas con un chequeo profesional.</p>
     </div>
 
     <div class="card">
       <h3>Instalación</h3>
-      <p>Persianas nuevas a medida.</p>
-      <a class="btn" href="#contacto">Ver más</a>
+      <p>Montaje profesional de persianas a medida.</p>
     </div>
 
     <div class="card">
       <h3>Automatismos</h3>
-      <p>Motorización completa.</p>
-      <a class="btn" href="#contacto">Ver más</a>
+      <p>Motoriza tus persianas y mejora tu comodidad.</p>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- BLOQUE -->
+<section class="split">
+  <img src="https://images.unsplash.com/photo-1581579186913-45acb3c4f5b8?auto=format&fit=crop&w=800&q=80">
+
+  <div>
+    <h2>Servicio Técnico</h2>
+    <p>
+      En Lirenova ofrecemos asistencia completa para tus persianas:
+      limpieza, reparación y motorización.
+    </p>
+
+    <a class="btn" href="#contacto">Gestionar mantenimiento</a>
+  </div>
+</section>
+
+<!-- FORM -->
 <section class="section" id="contacto">
-  <h2>Pide presupuesto</h2>
+  <h2>Pide presupuesto gratis</h2>
 
   <form onsubmit="enviarWhatsApp(); return false;">
     <input type="text" id="nombre" placeholder="Nombre" required>
     <input type="text" id="telefono" placeholder="Teléfono" required>
-    <textarea id="mensaje" placeholder="¿Qué necesitas?" required></textarea>
+    <textarea id="mensaje" placeholder="Describe tu problema"></textarea>
 
-    <button class="btn">Enviar</button>
+    <button class="btn">Enviar solicitud</button>
   </form>
 </section>
 
@@ -157,7 +210,7 @@ footer {
 <footer>
   <h3>Lirenova</h3>
   <p>lirenova.es@gmail.com</p>
-  <p>674 98 29 94</p>
+  <p>+34 674 98 29 94</p>
 </footer>
 
 <script>
@@ -168,7 +221,7 @@ function enviarWhatsApp() {
 
   var texto = "Hola, soy " + nombre +
               "%0A Teléfono: " + telefono +
-              "%0A Necesito: " + mensaje;
+              "%0A " + mensaje;
 
   window.open("https://wa.me/34674982994?text=" + texto, "_blank");
 }
