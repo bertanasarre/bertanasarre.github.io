@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lirenova | Reparación de Persianas</title>
+<title>Lirenova</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -22,44 +22,55 @@ nav {
   justify-content: space-between;
   padding: 20px 8%;
   background: white;
-  position: sticky;
-  top: 0;
 }
 
 nav h2 {
   font-family: 'Orbitron';
 }
 
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #3e3a36;
+}
+
 .btn {
   background: #a67c52;
   color: white;
-  padding: 14px 25px;
+  padding: 12px 22px;
   border-radius: 30px;
   text-decoration: none;
 }
 
 /* HERO */
 .hero {
-  padding: 80px 8%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 8%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
 }
 
 .hero h1 {
-  font-size: 42px;
   font-family: 'Orbitron';
+  font-size: 44px;
 }
 
-.hero p {
-  color: #666;
-}
-
-/* SECCIONES */
-.section {
-  padding: 70px 8%;
-  text-align: center;
+.hero img {
+  width: 420px;
+  border-radius: 15px;
 }
 
 /* SERVICIOS */
+.section {
+  padding: 90px 8%;
+  text-align: center;
+}
+
 .services {
   display: flex;
   gap: 20px;
@@ -71,15 +82,20 @@ nav h2 {
   min-width: 250px;
   background: white;
   padding: 25px;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
-/* OPINIONES */
-.testimonial {
-  background: white;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
+/* BLOQUE */
+.split {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.split img {
+  width: 400px;
+  border-radius: 15px;
 }
 
 /* FORM */
@@ -100,19 +116,6 @@ footer {
   color: white;
   padding: 40px;
 }
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 22px;
-  text-decoration: none;
-}
 </style>
 </head>
 
@@ -121,88 +124,86 @@ footer {
 <!-- NAV -->
 <nav>
   <h2>Lirenova</h2>
-  <a class="btn" href="tel:674982994">Llamar</a>
+
+  <div>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <a class="btn" href="tel:674982994">Llámanos</a>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <h1>Reparación de persianas en Barcelona en menos de 24h</h1>
-  <p>Servicio urgente, económico y con garantía. Presupuesto GRATIS.</p>
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <h1>Tu hogar cómodo, persianas perfectas</h1>
+    <p>Lirenova, técnicos en montaje y reparación</p>
 
-  <a class="btn" href="https://wa.me/34674982994">Pedir presupuesto por WhatsApp</a>
+    <a class="btn" href="https://wa.me/34674982994">WhatsApp</a>
+  </div>
+
+  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">
 </section>
 
 <!-- SERVICIOS -->
-<section class="section">
-  <h2>Servicios</h2>
+<section class="section" id="servicios">
+  <h2>Nuestros Servicios</h2>
+  <p>Sistemas duraderos y estéticos adaptados a cada vivienda.</p>
 
   <div class="services">
+
     <div class="card">
-      <h3>Reparación</h3>
-      <p>Arreglamos cualquier persiana rota el mismo día.</p>
+      <h3>Mantenimiento</h3>
+      <p>Asegura tus persianas con un chequeo profesional.</p>
     </div>
 
     <div class="card">
       <h3>Instalación</h3>
-      <p>Persianas nuevas a medida para tu hogar.</p>
+      <p>Montaje profesional de persianas a medida.</p>
     </div>
 
     <div class="card">
-      <h3>Motorización</h3>
-      <p>Automatizamos tus persianas fácilmente.</p>
+      <h3>Automatismos</h3>
+      <p>Motoriza tus persianas y mejora tu comodidad.</p>
     </div>
+
   </div>
 </section>
 
-<!-- PRECIOS -->
-<section class="section">
-  <h2>Precios orientativos</h2>
+<!-- BLOQUE -->
+<section class="split">
+  <img src="https://images.unsplash.com/photo-1581579186913-45acb3c4f5b8?auto=format&fit=crop&w=800&q=80">
 
-  <p>Reparación desde 40€</p>
-  <p>Instalación desde 120€</p>
-  <p>Motorización desde 150€</p>
+  <div>
+    <h2>Servicio Técnico</h2>
+    <p>
+      En Lirenova ofrecemos asistencia completa para tus persianas:
+      limpieza, reparación y motorización.
+    </p>
 
-  <p><strong>Presupuesto gratuito y sin compromiso</strong></p>
-</section>
-
-<!-- POR QUÉ NOSOTROS -->
-<section class="section">
-  <h2>¿Por qué elegirnos?</h2>
-
-  <p>✔ Servicio en el mismo día</p>
-  <p>✔ Atención rápida por WhatsApp</p>
-  <p>✔ Precios económicos</p>
-  <p>✔ Materiales de calidad</p>
-</section>
-
-<!-- OPINIONES -->
-<section class="section">
-  <h2>Opiniones</h2>
-
-  <div class="testimonial">⭐⭐⭐⭐⭐ Muy rápidos y profesionales</div>
-  <div class="testimonial">⭐⭐⭐⭐⭐ Buen precio y excelente servicio</div>
-  <div class="testimonial">⭐⭐⭐⭐⭐ Recomendado 100%</div>
+    <a class="btn" href="#contacto">Gestionar mantenimiento</a>
+  </div>
 </section>
 
 <!-- CONTACTO -->
-<section class="section">
-  <h2>Solicita tu presupuesto ahora</h2>
+<section class="section" id="contacto">
+  <h2>Pide presupuesto gratis</h2>
 
   <form onsubmit="enviarWhatsApp(); return false;">
     <input type="text" id="nombre" placeholder="Nombre" required>
     <input type="text" id="telefono" placeholder="Teléfono" required>
-    <textarea id="mensaje" placeholder="¿Qué necesitas?" required></textarea>
+    <textarea id="mensaje" placeholder="Describe tu problema"></textarea>
 
-    <button class="btn">Enviar por WhatsApp</button>
+    <button class="btn">Enviar solicitud</button>
   </form>
 </section>
 
 <footer>
-  <p>📧 lirenova.es@gmail.com | 📞 674 98 29 94</p>
-  <p>Lirenova © 2026</p>
+  <h3>Lirenova</h3>
+  <p>lirenova.es@gmail.com</p>
+  <p>+34 674 98 29 94</p>
 </footer>
-
-<a class="whatsapp" href="https://wa.me/34674982994">💬</a>
 
 <script>
 function enviarWhatsApp() {
@@ -210,10 +211,9 @@ function enviarWhatsApp() {
   var telefono = document.getElementById("telefono").value;
   var mensaje = document.getElementById("mensaje").value;
 
-  var texto = "Hola, necesito reparar una persiana." +
-              "%0A Nombre: " + nombre +
+  var texto = "Hola, soy " + nombre +
               "%0A Teléfono: " + telefono +
-              "%0A Detalles: " + mensaje;
+              "%0A " + mensaje;
 
   window.open("https://wa.me/34674982994?text=" + texto, "_blank");
 }
